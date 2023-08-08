@@ -1,16 +1,20 @@
 // import DateCounter from "./DateCounter";
-import { useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 
 const initialStates{
   questions : [],
-  status: "loading "
-}
+  status: "loading ",
+};
  
 
 
+
 export default function App() {
+
+  const [state , dispatch] = useReducer(reducer , initialStates);
+
   useEffect(function () {
     fetch("http://localhost:9000/questions")
       .then((res) => res.json())
