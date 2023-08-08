@@ -1,7 +1,7 @@
 // import DateCounter from "./DateCounter";
 import { useEffect, useReducer } from "react";
 import Header from "./Header";
-import Main from "./Main";
+import Main from "./componentes/Main";
 
 const initialStates{
   questions : [],
